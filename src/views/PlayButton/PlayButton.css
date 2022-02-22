@@ -1,0 +1,14 @@
+.PlayButton {
+  border: none;
+  margin: 0px 64px;
+  background-color: transparent;
+}
+
+.PlayButton:hover {
+  cursor: pointer;
+}
+
+.PlayButtonIcon {
+  height: 74px;
+  width: auto;
+}
