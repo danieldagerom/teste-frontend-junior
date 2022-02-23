@@ -1,0 +1,22 @@
+.AlbumCardTrack {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.AlbumCardTrack:hover {
+  cursor: pointer;
+}
+
+.AlbumCardTrack.active {
+  background-color: rgba(0, 0, 0, 0.15);
+}

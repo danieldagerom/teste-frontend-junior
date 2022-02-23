@@ -10,6 +10,7 @@ export function PlayButton(player: PlayerType, audioElement: HTMLAudioElement) {
 
     playButton?.addEventListener('click', () => {
       player.playing ? player.pause() : player.play();
+
       const playClickEvent = new Event('onplayclick');
       playButtonIcon?.dispatchEvent(playClickEvent);
       audioElement.dispatchEvent(playClickEvent);
