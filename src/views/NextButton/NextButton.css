@@ -1,0 +1,13 @@
+.NextButton {
+  border: none;
+  background-color: transparent;
+}
+
+.NextButton:hover {
+  cursor: pointer;
+}
+
+.NextButtonIcon {
+  height: 64px;
+  width: 64px;
+}

@@ -1,0 +1,13 @@
+.PrevButton {
+  border: none;
+  background-color: transparent;
+}
+
+.PrevButton:hover {
+  cursor: pointer;
+}
+
+.PrevButtonIcon {
+  height: 64px;
+  width: 64px;
+}

@@ -1,6 +1,5 @@
 .PlayButton {
   border: none;
-  margin: 0px 64px;
   background-color: transparent;
 }
 
@@ -9,6 +8,6 @@
 }
 
 .PlayButtonIcon {
-  height: 74px;
-  width: auto;
+  height: 128px;
+  width: 128px;
 }

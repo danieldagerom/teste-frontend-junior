@@ -1,22 +1,30 @@
 import { html } from '~/utils';
+import albums from '~/mocks/albums.json';
 import { Player } from '~/models/Player';
 import { Header, PlayerBar } from './';
 import './App.css';
 
 export function App() {
   const player = new Player();
+  const audioElement = new Audio();
+  
+  // TEMP
+  player.playlist.addAlbum(albums[0]);
+  audioElement.setAttribute('src', player.trackUrl || '');
 
-  const audioElement = new Audio(
-    'https://www.netmundi.org/home/wp-content/uploads/2017/08/beethoven_moonlight_sonata.mp3'
-  );
   audioElement.addEventListener('onplayclick', () => {
-    player.playing ? audioElement.play() : audioElement.pause();
+    if (player.playlist.albums.length > 0 ) {
+      player.playing ? audioElement.play() : audioElement.pause();
+    } else {
+      alert('Playlist vazia')
+    }
+  });
+
+  audioElement.addEventListener('ontrackchange', () => {
+    audioElement.setAttribute('src', player.trackUrl || '');
   });
 
   return html`
-    <div class="App">
-      ${Header()}
-      ${PlayerBar(player, audioElement)}
-    </div>
+    <div class="App">${Header()} ${PlayerBar(player, audioElement)}</div>
   `;
 }
